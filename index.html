@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Mini Applis JS Modernes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>Mini Applis JS</h2>
+  <button onclick="afficher('app1')">Message</button>
+  <button onclick="afficher('app2')">Pair/Impair</button>
+  <button onclick="afficher('app3')">Multiplication</button>
+  <button onclick="afficher('app4')">Majorité</button>
+  <button onclick="afficher('app5')">Calculatrice</button>
+  <button onclick="afficher('app6')">Fruits</button>
+  <button onclick="afficher('app7')">Plus grand</button>
+  <button onclick="afficher('app8')">Compter</button>
+</div>
+
+<div class="content">
+  <!-- 1. Message -->
+  <section id="app1">
+    <h2>Afficher un message</h2>
+    <button id='btn'>Cliquez</button>
+    <p id="msg">je suis nouveau en js</p>
+  </section>
+
+  <!-- 2. Pair ou impair -->
+  <section id="app2">
+    <h2>Pair ou Impair</h2>
+    <input type="number" id="nbPair" placeholder="Entrez un nombre">
+    <button class="action" onclick="verifierPair()">Vérifier</button>
+    <p id="resPair"></p>
+  </section>
+
+  <!-- 3. Multiplication -->
+  <section id="app3">
+    <h2>Table de multiplication</h2>
+    <input type="number" id="nbMulti" placeholder="Entrez un nombre">
+    <button class="action" onclick="genererTable()">Générer</button>
+    <ul id="resMulti"></ul>
+  </section>
+
+  <!-- 4. Majorité -->
+  <section id="app4">
+    <h2>Vérifier la majorité</h2>
+    <input type="number" id="age" placeholder="Entrez votre âge">
+    <button class="action" onclick="verifierAge()">Vérifier</button>
+    <p id="resAge"></p>
+  </section>
+
+  <!-- 5. Calculatrice -->
+  <section id="app5">
+    <h2>Mini Calculatrice</h2>
+    <input type="number" id="calc1" placeholder="Nombre 1">
+    <select id="op">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+    <input type="number" id="calc2" placeholder="Nombre 2">
+    <button class="action" onclick="calculer()">=</button>
+    <p id="resCalc"></p>
+  </section>
+
+  <!-- 6. Fruits -->
+  <section id="app6">
+    <h2>Liste de fruits 🍎🍌🍊</h2>
+    <button class="action" onclick="afficherFruits()">Afficher les fruits</button>
+    <ul id="resFruits"></ul>
+  </section>
+
+  <!-- 7. Plus grand -->
+  <section id="app7">
+    <h2>Plus grand nombre</h2>
+    <input type="number" id="max1" placeholder="Nombre 1">
+    <input type="number" id="max2" placeholder="Nombre 2">
+    <input type="number" id="max3" placeholder="Nombre 3">
+    <button class="action" onclick="trouverMax()">Trouver</button>
+    <p id="resMax"></p>
+  </section>
+
+  <!-- 8. Compter -->
+  <section id="app8">
+    <h2>Compter de 1 à 10</h2>
+    <button class="action" onclick="compter()">Démarrer</button>
+    <ul id="resCompter"></ul>
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
